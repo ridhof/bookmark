@@ -1,3 +1,15 @@
+# Bookmark
+
+Bookmark is Twitter x Google Drive x Pinterest
+Save, Manage, and Collaborate for Bookmark is easier than ever
+
+## Page
+
+- `/` for landing page
+- `/home` for homepage, where you can see all bookmark, including yours and people who share it with you
+- `/shared` for shared bookmark
+- `/profile` for your bookmark
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

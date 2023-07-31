@@ -1,103 +1,100 @@
 'use client'
 
-import { Link } from '@chakra-ui/next-js'
-import { Button } from '@chakra-ui/react'
-import Image from 'next/image'
-import styles from './page.module.css'
+import { CheckIcon, LinkIcon, StarIcon } from '@chakra-ui/icons'
+import { Box, Button, Center, Flex, Image, Stack, Text } from '@chakra-ui/react'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <Link
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            _hover={{
-              textDecoration: "none"
-            }}
+    <Flex
+      direction="row"
+      width="100%"
+      minHeight="100vh"
+      backgroundColor="space_cadet.400"
+    >
+      <Box
+        width="100%"
+        backgroundColor="space_cadet.400"
+        color="white"
+      >
+        <Center>
+          <Stack
+            spacing="48px"
+            width="75%"
+            marginTop="220px"
           >
-            By{' '}
-            <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
+            <Box>
+              <Text fontSize="2xl">
+                <CheckIcon marginRight={4} /> Save your bookmarks.
+              </Text>
+            </Box>
+            <Box>
+              <Text fontSize="2xl">
+                <StarIcon marginRight={4} /> Categorize your bookmarks.
+              </Text>
+            </Box>
+            <Box>
+              <Text fontSize="2xl">
+                <LinkIcon marginRight={4} /> Share your bookmarks.
+              </Text>
+            </Box>
+          </Stack>
+        </Center>
+      </Box>
+      <Box
+        width="100%"
+        backgroundColor="white"
+      >
+        <Center>
+          <Stack
+            spacing="92px"
+            width="75%"
+            marginTop="140px"
+          >
+            <Box>
+              <Image
+                src="/bookmark.svg"
+                alt="bookmark.svg"
+                boxSize="70px"
               />
-          </Link>
-        </div>
-      </div>
+              <Text fontSize="3xl" fontWeight="semibold">
+                Manage and share your bookmarks without hassle now
+              </Text>
+            </Box>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <Button colorScheme="blue">Click</Button>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+            <Stack spacing="20px">
+              <Text fontSize="xl" fontWeight="semibold">
+                Join Bookmark today.
+              </Text>
+              <Button
+                rounded="lg"
+                backgroundColor="space_cadet.400"
+                color="white"
+                outlineColor="space_cadet.400"
+                _hover={{
+                  color: "white",
+                  backgroundColor: "space_cadet.200",
+                  outlineColor: "space_cadet.200",
+                }}
+              >
+                Sign Up
+              </Button>
+              <Button
+                rounded="lg"
+                backgroundColor="white"
+                color="space_cadet.400"
+                outlineColor="space_cadet.400"
+                _hover={{
+                  backgroundColor: "space_cadet.200",
+                  color: "white",
+                  outlineColor: "space_cadet.200",
+                }}
+              >
+                Log in
+              </Button>
+            </Stack>
+          </Stack>
+        </Center>
+      </Box>
+    </Flex>
   )
 }
