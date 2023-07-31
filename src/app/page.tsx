@@ -1,3 +1,7 @@
+'use client'
+
+import { Link } from '@chakra-ui/next-js'
+import { Button } from '@chakra-ui/react'
 import Image from 'next/image'
 import styles from './page.module.css'
 
@@ -10,21 +14,24 @@ export default function Home() {
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
         <div>
-          <a
+          <Link
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
+            _hover={{
+              textDecoration: "none"
+            }}
           >
             By{' '}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+                src="/vercel.svg"
+                alt="Vercel Logo"
+                className={styles.vercelLogo}
+                width={100}
+                height={24}
+                priority
+              />
+          </Link>
         </div>
       </div>
 
@@ -37,6 +44,7 @@ export default function Home() {
           height={37}
           priority
         />
+        <Button colorScheme="blue">Click</Button>
       </div>
 
       <div className={styles.grid}>
