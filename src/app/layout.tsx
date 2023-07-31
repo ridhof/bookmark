@@ -1,5 +1,6 @@
 import './globals.css'
 import { Providers } from './providers'
+import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
 import { Rubik } from 'next/font/google'
 
@@ -21,6 +22,7 @@ export default function RootLayout({
         <Providers>
           {children}
         </Providers>
+        <Analytics />
       </body>
     </html>
   )
