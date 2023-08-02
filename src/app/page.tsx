@@ -3,7 +3,7 @@
 import { HeroDescription, HeroTitle } from './containers'
 import { Flex, Show } from '@chakra-ui/react'
 
-export default function Home() {
+export default function LandingPage() {
   return (
     <Flex
       direction="row"

@@ -51,7 +51,7 @@ export function Providers({
     <CacheProvider>
       <ChakraProvider theme={theme}>
         <Box
-          backgroundColor="honeydew.100"
+          backgroundColor="white"
           maxWidth="100vw"
           minHeight="100vh"
         >
