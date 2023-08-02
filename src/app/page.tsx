@@ -1,6 +1,6 @@
 'use client'
 
-import { DescriptionSection, HeroSection } from './components'
+import { HeroDescription, HeroTitle } from './containers'
 import { Flex, Show } from '@chakra-ui/react'
 
 export default function Home() {
@@ -12,9 +12,9 @@ export default function Home() {
       backgroundColor="space_cadet.400"
     >
       <Show above="lg">
-        <DescriptionSection />
+        <HeroDescription />
       </Show>
-      <HeroSection />
+      <HeroTitle />
     </Flex>
   )
 }

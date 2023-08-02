@@ -1,6 +1,6 @@
 import { Box, Button, Center, Image, Stack, Text } from '@chakra-ui/react'
 
-export function HeroSection() {
+export function HeroTitle() {
     return (
         <Box
             width="100%"
