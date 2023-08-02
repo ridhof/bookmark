@@ -25,7 +25,7 @@ export function HeroDescription() {
     return (
         <Box
             width="100%"
-            backgroundColor="space_cadet.400"
+            bgGradient="linear(to-r, space_cadet.500, ylnmn_blue.600)"
             color="white"
         >
             <Center>

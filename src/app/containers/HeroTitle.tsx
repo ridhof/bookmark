@@ -1,3 +1,4 @@
+import { HeroButtonOutline, HeroButtonSolid } from '../components'
 import { Box, Button, Center, Image, Stack, Text } from '@chakra-ui/react'
 
 export function HeroTitle() {
@@ -28,33 +29,17 @@ export function HeroTitle() {
                             Join Bookmark today.
                         </Text>
 
-                        <Button
-                            rounded="lg"
-                            backgroundColor="space_cadet.400"
-                            color="white"
-                            outlineColor="space_cadet.400"
-                            _hover={{
-                                color: "white",
-                                backgroundColor: "space_cadet.200",
-                                outlineColor: "space_cadet.200",
-                            }}
-                        >
-                            Sign Up
-                        </Button>
-
-                        <Button
-                            rounded="lg"
-                            backgroundColor="white"
-                            color="space_cadet.400"
-                            outlineColor="space_cadeet.400"
-                            _hover={{
-                                backgroundColor: "space_cadet.100",
-                                color: "white",
-                                outlineColor: "space_cadet.100",
-                            }}
-                        >
-                            Log in
-                        </Button>
+                        <HeroButtonSolid
+                            key="signup"
+                            text="Sign Up"
+                            colorVariant="ylnmn_blue"
+                        />
+                        <HeroButtonOutline
+                            key="login"
+                            text="Log in"
+                            colorVariant="ylnmn_blue"
+                        />
+                        
                     </Stack>
                 </Stack>
             </Center>
