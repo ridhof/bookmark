@@ -10,6 +10,10 @@ Save, Manage, and Collaborate for Bookmark is easier than ever
 - `/shared` for shared bookmark
 - `/profile` for your bookmark
 
+## Icons
+
+- [React Icons](https://react-icons.github.io/react-icons/icons?name=bi)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
