@@ -1,11 +1,13 @@
 'use client'
 
+import { BottomNav, UpperNav } from '../components'
 import { AppPageLayout } from '../containers'
 
 export default function Notifications() {
     return (
         <AppPageLayout>
-            Notifications
+            <UpperNav title="Notifications" />
+            <BottomNav />
         </AppPageLayout>
     )
 }

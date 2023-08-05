@@ -1,5 +1,6 @@
 'use client'
 
+import { BottomNav, UpperNav } from '../components'
 import { AppPageLayout } from '../containers'
 import {
     Show,
@@ -15,13 +16,18 @@ import {
 export default function Home() {
     return (
         <AppPageLayout>
+            <UpperNav title="Home" isBorder={false} />
             <Tabs
                 size="lg"
                 align="center"
                 variant="unstyled"
                 isFitted
             >
-                <TabList>
+
+                <TabList
+                    borderBottom="1px"
+                    borderBottomColor="gray.100"
+                >
                     <Tab
                         fontSize="md"
                         _selected={{ fontWeight: "semibold" }}
@@ -63,6 +69,7 @@ export default function Home() {
                     </TabPanel>
                 </TabPanels>
             </Tabs>
+            <BottomNav />
         </AppPageLayout>
     )
 }

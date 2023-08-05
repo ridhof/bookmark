@@ -1,12 +1,11 @@
-import { BottomNav } from '../components'
 import { Box } from '@chakra-ui/react'
 
 export function AppPageLayout({
-    children
+    children,
 }: {
-    children: React.ReactNode
+    children: React.ReactNode,
 }) {
-   return (
+    return (
         <Box
             bgGradient="linear(to-r, space_cadet.500, ylnmn_blue.600, space_cadet.500)"
             width="100vw"
@@ -19,7 +18,6 @@ export function AppPageLayout({
                 backgroundColor="white"
             >
                 { children }
-                <BottomNav />
             </Box>
         </Box>
    ) 
