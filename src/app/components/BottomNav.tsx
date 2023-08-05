@@ -37,7 +37,7 @@ export function BottomNav() {
                                 <Link
                                     key={`${id}-link-${key}`}
                                     as={NextLink}
-                                    href="/"
+                                    href={`/${key}`}
                                     width="100%"
                                 >
                                     <Button

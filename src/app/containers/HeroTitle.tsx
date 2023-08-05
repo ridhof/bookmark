@@ -1,5 +1,5 @@
 import { HeroButtonOutline, HeroButtonSolid } from '../components'
-import { Box, Button, Center, Image, Stack, Text } from '@chakra-ui/react'
+import { Box, Center, Image, Stack, Text } from '@chakra-ui/react'
 
 export function HeroTitle() {
     return (
