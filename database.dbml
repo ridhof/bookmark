@@ -1,0 +1,100 @@
+Project Bookmark {
+    database_type: 'PostgreSQL'
+    note: '''
+        # Bookmark Database
+        **ERD for Bookmark Database**
+    '''
+}
+
+Table users {
+    id uuid [primary key]
+    username varchar(36) [not null, unique]
+    display_name varchar(36)
+    created_at timestamp [not null]
+    updated_at timestamp
+}
+
+Table users_follows {
+    following_user_id uuid [not null]
+    followed_user_id uuid [not null]
+    created_at timestamp [not null]
+    updated_at timestamp
+}
+
+Table collections {
+    id uuid [primary key]
+    user_id uuid [not null]
+    name varchar(36) [not null]
+    created_at timestamp [not null]
+    updated_at timestamp
+}
+
+Table users_has_collections {
+    id uuid [primary key]
+    user_id uuid
+    collection_id uuid
+    created_at timestamp [not null]
+    updated_at timestamp
+}
+
+Table bookmarks {
+    id uuid [primary key]
+    user_id uuid [not null]
+    collection_id uuid [not null]
+    url varchar [not null]
+    created_at timestamp [not null]
+    updated_at timestamp
+}
+
+Table user_activities {
+    id uuid [primary key]
+    user_id uuid [not null]
+    collection_id uuid [not null]
+    bookmark uuid
+    created_at timestamp [not null]
+    updated_at timestamp
+}
+
+Table user_notifications {
+    id uuid [primary key]
+    user_id uuid [not null]
+    user_activity_id uuid [not null]
+    created_at timestamp [not null]
+    updated_at timestamp
+}
+
+// user follows
+
+Ref: users.id < users_follows.following_user_id
+
+Ref: users.id < users_follows.followed_user_id
+
+// collections
+
+Ref: collections.user_id > users.id
+
+// user has collections
+
+Ref: users_has_collections.user_id > users.id
+
+Ref: users_has_collections.collection_id > collections.id
+
+// bookmarks
+
+Ref: bookmarks.user_id > users.id
+
+Ref: bookmarks.collection_id > collections.id
+
+// user_activities
+
+Ref: user_activities.user_id > users.id
+
+Ref: user_activities.collection_id > collections.id
+
+Ref: user_activities.bookmark > bookmarks.id
+
+// user_notifications
+
+Ref: user_notifications.user_id > users.id
+
+Ref: user_notifications.user_activity_id > user_activities.id

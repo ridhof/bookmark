@@ -9,6 +9,8 @@ MVP flow:
 
 ![bookmark_flow](./docs/bookmark_flow.png)
 
+[ERD Diagram](https://dbdocs.io/ridhof/Bookmark)
+
 
 ## Page
 
