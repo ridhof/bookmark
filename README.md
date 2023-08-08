@@ -3,6 +3,13 @@
 Bookmark is Twitter x Google Drive x Pinterest
 Save, Manage, and Collaborate for Bookmark is easier than ever
 
+## Flow
+
+MVP flow:
+
+![bookmark_flow](./docs/bookmark_flow.png)
+
+
 ## Page
 
 - `/` for landing page
@@ -15,6 +22,11 @@ Save, Manage, and Collaborate for Bookmark is easier than ever
 - [React Icons](https://react-icons.github.io/react-icons/icons?name=bi)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Tools 
+
+- excalidraw - to draw or create flow quickly
+- dbdiagram - to visualize db relation
 
 ## Getting Started
 
