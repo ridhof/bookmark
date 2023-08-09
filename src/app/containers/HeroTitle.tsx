@@ -30,12 +30,10 @@ export function HeroTitle() {
                         </Text>
 
                         <HeroButtonSolid
-                            key="signup"
                             text="Sign Up"
                             colorVariant="ylnmn_blue"
                         />
                         <HeroButtonOutline
-                            key="login"
                             text="Log in"
                             colorVariant="ylnmn_blue"
                         />
