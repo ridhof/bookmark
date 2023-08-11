@@ -31,6 +31,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "dbdocs": "^0.8.0"
+    "dbdocs": "^0.8.0",
+    "supabase": "^1.83.7"
   }
 }
