@@ -36,7 +36,6 @@
   "devDependencies": {
     "dbdocs": "^0.8.0",
     "prisma": "^5.1.1",
-    "supabase": "^1.83.7",
     "vercel": "^31.2.3"
   }
 }
