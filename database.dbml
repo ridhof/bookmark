@@ -64,6 +64,13 @@ Table user_notifications {
     updated_at timestamp
 }
 
+Table user_waitlists {
+    id uuid [primary key]
+    email varchar(256) [unique, not null]
+    created_at timestamp [not null]
+    updated_at timestamp
+}
+
 // user follows
 
 Ref: users.id < users_follows.following_user_id
